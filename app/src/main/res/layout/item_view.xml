@@ -10,13 +10,14 @@
     <ImageView
         android:id="@+id/firstTeamImageIcon"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
         android:src="@color/black"
+        android:scaleType="fitCenter"
         />
 
     <TextView
@@ -34,14 +35,15 @@
     <ImageView
         android:id="@+id/secondTeamImageIcon"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/firstTeamImageIcon"
         app:layout_constraintStart_toStartOf="@id/firstTeamImageIcon"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="ContentDescription"
         android:layout_marginTop="16dp"
         android:src="@color/black"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="fitCenter"
         />
 
     <TextView

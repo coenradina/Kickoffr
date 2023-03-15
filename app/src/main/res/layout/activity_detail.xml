@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/leagueTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/premiere_league"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/matchDayDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/leagueTextView"
+        app:layout_constraintStart_toStartOf="@id/leagueTextView"
+        app:layout_constraintEnd_toEndOf="@id/leagueTextView"
+        android:text="@string/day_date"
+        android:layout_marginTop="4dp"
+        />
+
+    <ImageView
+        android:id="@+id/firstTeamImageIcon"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/matchDayDate"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vs"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/firstTeamTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/firstTeamImageIcon"
+        app:layout_constraintStart_toStartOf="@id/firstTeamImageIcon"
+        app:layout_constraintEnd_toEndOf="@id/firstTeamImageIcon"
+        android:textAlignment="center"
+        tools:text="first"
+        android:layout_marginTop="4dp"
+        />
+
+    <TextView
+        android:id="@+id/vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/firstTeamImageIcon"
+        app:layout_constraintEnd_toStartOf="@id/secondTeamImageIcon"
+        app:layout_constraintTop_toTopOf="@id/firstTeamImageIcon"
+        app:layout_constraintBottom_toBottomOf="@id/firstTeamImageIcon"
+        android:text="@string/vs"
+        />
+
+    <ImageView
+        android:id="@+id/secondTeamImageIcon"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="@id/firstTeamImageIcon"
+        app:layout_constraintStart_toEndOf="@id/vs"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/secondTeamTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/secondTeamImageIcon"
+        app:layout_constraintStart_toStartOf="@id/secondTeamImageIcon"
+        app:layout_constraintEnd_toEndOf="@id/secondTeamImageIcon"
+        android:textAlignment="center"
+        tools:text="second"
+        android:layout_marginTop="4dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/firstTeamTextName"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="24dp"
+        >
+
+        <ImageView
+            android:id="@+id/firstTeamLineUpImageView"
+            app:layout_constraintTop_toBottomOf="@id/vs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:ignore="ContentDescription"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/match_1_1"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/secondTeamLineUpImageView"
+            app:layout_constraintTop_toBottomOf="@id/firstTeamLineUpImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:ignore="ContentDescription"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/match_1_2"
+            android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
